@@ -86,12 +86,12 @@ include "header.php";
                     $invoiceid = $row['InvoiceID'];
                 }
 				//update de voorraad
-                foreach($_SESSION['winkelmandje'] as $key => $value){
-                    $productquery = "INSERT INTO customerinvoicesstockitems (InvoiceID,StockItemID,Amount) VALUES ($invoiceid,$key,$value)";
-                    $db->exec($productquery);
-                    $subtractstock = "UPDATE stockitemholdings SET QuantityOnHand = QuantityOnHand - $value WHERE StockItemID = $key";
-                    $db->exec($subtractstock);
-                }
+                //foreach($_SESSION['winkelmandje'] as $key => $value){
+                //    $productquery = "INSERT INTO customerinvoicesstockitems (InvoiceID,StockItemID,Amount) VALUES ($invoiceid,$key,$value)";
+                //    $db->exec($productquery);
+                //    $subtractstock = "UPDATE stockitemholdings SET QuantityOnHand = QuantityOnHand - $value WHERE StockItemID = $key";
+                //    $db->exec($subtractstock);
+                //}
 				//leegt winkelmandje en verwijst door naar de iDeal demo
 				unset($_SESSION['winkelmandje']);
 				redirect('https://www.ideal.nl/demo/?screens=dskweb');
