@@ -1,6 +1,6 @@
 <?php
 include 'header.php';
-if(isset(!$_SESSION['loggedIn'])){
+if(!isset($_SESSION['loggedIn'])){
     $id = '1234';
     $result = $db->query("SELECT * FROM customeraccounts WHERE CustomerAccountID = $id");
     while($row = $result->fetch()) {
@@ -26,7 +26,7 @@ if(isset(!$_SESSION['loggedIn'])){
                 <br>
                 <!--checkt of de data opgehaald kan worden, zoniet dan kan het handmatig ingevuld worden-->
                 <h5>Email address:</h5>
-                <input type="email" name="email" value="<?php if(isset(!$_SESSION['loggedIn'])&&!isset($_POST['email'])){print($keepemail);} elseif(isset($_POST['email'])) { print($_POST['email']);}?>">
+                <input type="email" name="email" value="<?php if(!isset($_SESSION['loggedIn'])&&!isset($_POST['email'])){print($keepemail);} elseif(isset($_POST['email'])) { print($_POST['email']);}?>">
                 <br>
                 <h5>First name:</h5><input type="text" name="first name" value="<?php if(!isset($_SESSION['loggedIn'])&&!isset($_POST['first_name'])){print($keepfname);} elseif(isset($_POST['first_name'])) { print($_POST['first_name']);}?>">
                 <br>
