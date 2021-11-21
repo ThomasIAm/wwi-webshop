@@ -284,7 +284,7 @@ $stockKey = filter_input(INPUT_GET, "stockKey", FILTER_SANITIZE_NUMBER_INT);
 				</form>
 				<?php
 				// wordt uitgevoerd als er een review geplaatst moet worden
-				if(isset(!$_SESSION['loggedIn']) && filter_has_var(INPUT_GET, 'submit')){
+				if(!isset($_SESSION['loggedIn']) && filter_has_var(INPUT_GET, 'submit')){
 					// sla het CustomerAccountID op
 					$customer = '1234';
 
