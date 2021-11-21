@@ -1,0 +1,86 @@
+html {
+	overflow-x: hidden;
+}
+li form button {
+	background-color: transparent;
+	border: none;
+	color: black;
+	font-size: 20px;
+}
+li form button:hover {
+	color: #19BBEF;
+}
+.productboxBottom {
+	margin-top: 10px;
+	border-width: 1px;
+}
+.producttitle {
+	font-weight: bold;
+	font-size: 20px;
+	color: #26262E;
+	margin-left: 5px;
+}
+.productprice {
+	border-top: 1px solid #dadada;
+	background: #26262E;
+	padding-top: 5px;
+	border-radius: 0px 0px 10px 10px;
+	height: 45px;
+}
+.pricetext {
+	font-weight: bold;
+	font-size: 1.4em;
+	color: white;
+	margin-left: 6px;
+	float: left;
+}
+#toCart {
+	margin-right: 6px;
+	margin-bottom: 7px;
+	float: right;
+}
+body {
+	background: white;
+}
+.navbar {
+	background-color: #FBFBFB;
+	border-color: orange;
+}
+.carousel-control-next-icon:after {
+	color: red;
+}
+.carousel-control-prev-icon:after {
+	color: red;
+}
+.carousel-control-prev-icon {
+	background-image: url("img/prev.svg");
+}
+.carousel-control-next-icon {
+	background-image: url("img/next.svg");
+}
+ol.carousel-indicators li {
+	background: #181818;
+}
+ol.carousel-indicators li.active {
+	background: #007BFF;
+}
+/* The alert message box */
+.alert {
+	padding: 20px;
+	background-color: #4bf442;
+	color: white;
+	margin: 10px;
+}
+.closebtn {
+	margin-right: 15px;
+	color: white;
+	font-weight: bold;
+	float: left;
+	font-size: 22px;
+	line-height: 20px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+.closebtn:hover {
+	color: black;
+}

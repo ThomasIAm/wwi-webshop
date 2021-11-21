@@ -1,0 +1,14 @@
+{
+    "name": "WWI - Webshop",
+    "short_name": "WWI - Webshop",
+    "icons": [
+        {
+            "src": "/img/favicons/android-chrome-72x72.png",
+            "sizes": "72x72",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#00aff4",
+    "background_color": "#00aff4",
+    "display": "standalone"
+}

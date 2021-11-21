@@ -1,1 +1,2 @@
-wwi-webshop
+# wwi-webshop
+Webshop voor KBS project WWI.
