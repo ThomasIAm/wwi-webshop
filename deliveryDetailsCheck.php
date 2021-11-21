@@ -22,7 +22,7 @@ if ( isset( $_POST[ 'Submit' ] ) ) {
 		//checkt of alle velden ingevuld zijn en zoniet geeft hij aan dat je ze verplicht moet invullen
 		if ( $firstname != "" && $lastname != "" && $email != "" && $country != "" && $province != "" && $townCity != "" && $address != "" && $zip != "" && $phone != "" ) {
 			//als je ingelogd bent worden je indien aangepaste gegevens geupdate
-			if ( isset( !$_SESSION[ 'loggedIn' ] ) ) {
+			if ( !isset( $_SESSION[ 'loggedIn' ] ) ) {
 				$loggedinID = '1234';
 				$updatequery = "UPDATE customeraccounts SET CustomerEmail = '$email', CustomerNAWFirstname = '$firstname', CustomerNAWLastname = '$lastname', CustomerNAWCountry = '$country', CustomerNAWProvince = '$province', CustomerNAWCity = '$townCity', CustomerNAWAddress = '$address', CustomerNAWZip = '$zip', CustomerNAWPhone ='$phone' WHERE CustomerAccountID = $loggedinID";
 				$db->exec( $updatequery );
