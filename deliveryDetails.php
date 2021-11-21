@@ -1,7 +1,7 @@
 <?php
 include 'header.php';
-if(isset($_SESSION['loggedIn'])){
-    $id = $_SESSION['loggedIn'];
+if(isset(!$_SESSION['loggedIn'])){
+    $id = '1234';
     $result = $db->query("SELECT * FROM customeraccounts WHERE CustomerAccountID = $id");
     while($row = $result->fetch()) {
         $keepfname = $row["CustomerNAWFirstname"];
@@ -26,12 +26,12 @@ if(isset($_SESSION['loggedIn'])){
                 <br>
                 <!--checkt of de data opgehaald kan worden, zoniet dan kan het handmatig ingevuld worden-->
                 <h5>Email address:</h5>
-                <input type="email" name="email" value="<?php if(isset($_SESSION['loggedIn'])&&!isset($_POST['email'])){print($keepemail);} elseif(isset($_POST['email'])) { print($_POST['email']);}?>">
+                <input type="email" name="email" value="<?php if(isset(!$_SESSION['loggedIn'])&&!isset($_POST['email'])){print($keepemail);} elseif(isset($_POST['email'])) { print($_POST['email']);}?>">
                 <br>
-                <h5>First name:</h5><input type="text" name="first name" value="<?php if(isset($_SESSION['loggedIn'])&&!isset($_POST['first_name'])){print($keepfname);} elseif(isset($_POST['first_name'])) { print($_POST['first_name']);}?>">
+                <h5>First name:</h5><input type="text" name="first name" value="<?php if(!isset($_SESSION['loggedIn'])&&!isset($_POST['first_name'])){print($keepfname);} elseif(isset($_POST['first_name'])) { print($_POST['first_name']);}?>">
                 <br>
                 <h5>Last name:</h5>
-                <input type="text" name="last name" value="<?php if(isset($_SESSION['loggedIn'])&&!isset($_POST['last_name'])){print($keeplname);} elseif(isset($_POST['last_name'])) { print($_POST['last_name']);}?>">
+                <input type="text" name="last name" value="<?php if(!isset($_SESSION['loggedIn'])&&!isset($_POST['last_name'])){print($keeplname);} elseif(isset($_POST['last_name'])) { print($_POST['last_name']);}?>">
                 <br>
                <h5>Country:</h5>
                <select style="width: 183px;" name="country" class="form-control">
@@ -283,15 +283,15 @@ if(isset($_SESSION['loggedIn'])){
                    <option value="Zambia">Zambia</option>
                    <option value="Zimbabwe">Zimbabwe</option>
 				</select>
-				<h5>Province:</h5><input type="text" name="province" value="<?php if(isset($_SESSION['loggedIn'])&&!isset($_POST['province'])){print($keepprovince);} elseif(isset($_POST['province'])) { print($_POST['province']);}?>">
+				<h5>Province:</h5><input type="text" name="province" value="<?php if(!isset($_SESSION['loggedIn'])&&!isset($_POST['province'])){print($keepprovince);} elseif(isset($_POST['province'])) { print($_POST['province']);}?>">
 				<br>
-				<h5>Town/City:</h5><input type="text" name="town/city" value="<?php if(isset($_SESSION['loggedIn'])&&!isset($_POST['town/city'])){print($keepcity);} elseif(isset($_POST['town/city'])) { print($_POST['town/city']);}?>">
+				<h5>Town/City:</h5><input type="text" name="town/city" value="<?php if(!isset($_SESSION['loggedIn'])&&!isset($_POST['town/city'])){print($keepcity);} elseif(isset($_POST['town/city'])) { print($_POST['town/city']);}?>">
 				<br>
-				<h5>Address line:</h5><input type="text" name="address" value="<?php if(isset($_SESSION['loggedIn'])&&!isset($_POST['address'])){print($keepaddress);} elseif(isset($_POST['address'])) { print($_POST['address']);}?>">
+				<h5>Address line:</h5><input type="text" name="address" value="<?php if(!isset($_SESSION['loggedIn'])&&!isset($_POST['address'])){print($keepaddress);} elseif(isset($_POST['address'])) { print($_POST['address']);}?>">
 				<br>
-				<h5>ZIP code:</h5><input type="text" name="ZIP code" value="<?php if(isset($_SESSION['loggedIn'])&&!isset($_POST['ZIP_code'])){print($keepzip);} elseif(isset($_POST['ZIP_code'])) { print($_POST['ZIP_code']);}?>">
+				<h5>ZIP code:</h5><input type="text" name="ZIP code" value="<?php if(!isset($_SESSION['loggedIn'])&&!isset($_POST['ZIP_code'])){print($keepzip);} elseif(isset($_POST['ZIP_code'])) { print($_POST['ZIP_code']);}?>">
 				<br>
-				<h5>Phone number:</h5><input type="tel" name="phone number" value="<?php if(isset($_SESSION['loggedIn'])&&!isset($_POST['phone_number'])){print($keepphone);} elseif(isset($_POST['phone_number'])) { print($_POST['phone_number']);}?>">
+				<h5>Phone number:</h5><input type="tel" name="phone number" value="<?php if(!isset($_SESSION['loggedIn'])&&!isset($_POST['phone_number'])){print($keepphone);} elseif(isset($_POST['phone_number'])) { print($_POST['phone_number']);}?>">
 				<br>
 				<input class="btn" style="margin-left: 60px; margin-top: 20px;" type="submit" value="Submit" name="Submit">
 			</form>
