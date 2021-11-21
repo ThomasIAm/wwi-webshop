@@ -90,14 +90,14 @@ if ($amount == "") {
                 </form>
                 <?php
                 //checkt of er iemand is ingelogd
-				if(isset($_POST['logout'])){
-					unset($_SESSION['loggedIn']);
-				}
+				//if(isset($_POST['logout'])){
+				//	unset($_SESSION['loggedIn']);
+				//}
 
-                if(isset($_SESSION['loggedIn'])){
+                if(!isset($_SESSION['loggedIn'])){
                 ?>
                 <form method="post">
-                    <input style="margin-left: 7px;" class="btn btn-secondary" type="submit" name="logout" value="Logout">
+                    <input style="margin-left: 7px;" class="btn btn-secondary" type="submit" name="logout" value="Logout" disabled>
                 </form>
                 <?php
                 } else {
