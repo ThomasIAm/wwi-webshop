@@ -10,7 +10,7 @@ include "header.php";
 		<div style="margin-left: 460px;" class="col-sm-12 text-left">
         <?php
 		//alle gegevens van het ingelogde account worden hier opgehaald en worden getoont aan de gebruiker
-        if(isset(!$_SESSION['loggedIn'])){
+        if(!isset($_SESSION['loggedIn'])){
             $loggedaccountid = '1234';
             $firstnamequery = "SELECT CustomerNAWFirstname FROM customeraccounts WHERE CustomerAccountID = $loggedaccountid";
 
