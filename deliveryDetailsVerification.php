@@ -77,14 +77,14 @@ include "header.php";
 			//update de voorraad
             if(isset($_POST['proceed'])){
                 $id = '1234';
-                $insertquery = "INSERT INTO customerinvoices (CustomerAccountID) VALUES ($id)";
+                //$insertquery = "INSERT INTO customerinvoices (CustomerAccountID) VALUES ($id)";
 				//bestelregel word aangemaakt
-                $db->exec($insertquery);
-                $invoicequery = "SELECT InvoiceID FROM customerinvoices WHERE CustomerAccountID = $id AND Time = (SELECT MAX(Time) FROM customerinvoices WHERE CustomerAccountID = $id)";
+                //$db->exec($insertquery);
+                //$invoicequery = "SELECT InvoiceID FROM customerinvoices WHERE CustomerAccountID = $id AND Time = (SELECT MAX(Time) FROM customerinvoices WHERE CustomerAccountID = $id)";
 				//ID van bestelregel word opgehaald
-                foreach($db->query($invoicequery) as $row){
-                    $invoiceid = $row['InvoiceID'];
-                }
+                //foreach($db->query($invoicequery) as $row){
+                //    $invoiceid = $row['InvoiceID'];
+                //}
 				//update de voorraad
                 //foreach($_SESSION['winkelmandje'] as $key => $value){
                 //    $productquery = "INSERT INTO customerinvoicesstockitems (InvoiceID,StockItemID,Amount) VALUES ($invoiceid,$key,$value)";
