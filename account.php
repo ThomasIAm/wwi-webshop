@@ -2,7 +2,7 @@
 include 'redirect.php';
 include 'header.php';
 
-if (isset($_SESSION['loggedIn'])) {
+if (!isset($_SESSION['loggedIn'])) {
 	redirect('deliveryDetailsVerification.php');
 
 } else {
