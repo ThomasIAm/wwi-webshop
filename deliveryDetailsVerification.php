@@ -68,7 +68,7 @@ include "header.php";
         <div class="col-sm-6" style="margin-left: 450px;">
         <form action="deliveryDetails.php">
 			<!--deze knop gaat terug naar customer details om je gegevens aan te passen-->
-            <br><input class="btn" style=" margin-top: 20px; width: 250px;" type="submit" value="Information is incorrect"><br>
+            <br><input class="btn" style=" margin-top: 20px; width: 250px;" type="submit" value="Information is incorrect" disabled><br>
         </form>
         <form action="" method="post">
 			<!--deze knop gaat naar de IDEAL page-->
