@@ -12,8 +12,8 @@
   </div>
 </footer>
 
-<script src="designProjectRick/vendor/jquery/jquery.min.js"></script>
-<script src="designProjectRick/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
